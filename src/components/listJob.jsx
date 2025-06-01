@@ -6,13 +6,7 @@ export const ListJob = ()=> {
 
 
     const [itemInput, setItemInput] = useState('')
-    const initialList = [
-        {
-            id:0,
-            nome:'Pedro',
-            done:true
-        }
-    ]
+    const initialList = []
     const [list, dispatch] = useReducer(listControl, initialList)
 
     const handdleAdd = ()=>{
@@ -56,6 +50,7 @@ export const ListJob = ()=> {
                     <input type="text" className="outline-none bg-white rounded mr-3 px-1 text-black"
                         value={itemInput}
                         onChange={i=>setItemInput(i.target.value)}
+                        placeholder="Digite uma terefa..."
                         onKeyDown={e=>{
                             if(e.key === 'Enter'){
                                 handdleAdd()
