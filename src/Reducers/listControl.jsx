@@ -35,9 +35,7 @@ export const listControl = (list, action)=>{
                 return t
             })
         case 'remove':
-            return list.filter(t=>{
-                t.id !== action.payload
-            })
+            return list.filter(t => t.id !== action.payload)
         default:
             return list
 
